@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TC_style.css">
+    <title>Test Scenario for Login Functionality</title>
+
+</head>
+
+<body>
+    <!-- Login Functionality -->
+    <div class="container">
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+
+        <!-- TC01 -->
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-001</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that admin can log in with valid credentials</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must have a valid username and password</li>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>The login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Input valid username in the "Username" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin</code>
+                        </td>
+                        <td>Username is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Input valid password in the "Password" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Password is entered, visible, and covered in dots.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click on the "Login" button.
+                        </td>
+                        <td>The user is successfully logged in and redirected to the Dashboard page. The Dashboard title
+                            is visible on the top menu.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC02 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-002</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that admin cannot log in with invalid credentials</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>The login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Input invalid username in the "Username" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin2</code>
+                        </td>
+                        <td>Username is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Input invalid password in the "Password" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">ADMIN123</code>
+                        </td>
+                        <td>Password is entered, visible, and covered in dots.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click on the "Login" button.
+                        </td>
+                        <td>An error message ‘Invalid credentials’ is displayed.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC03 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-003</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that admin cannot log in with only username filled</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>The login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Input valid username in the "Username" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin</code>
+                        </td>
+                        <td>Username is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Leave the "Password" field empty.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;"></code>
+                        </td>
+                        <td>The password field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click on the "Login" button.
+                        </td>
+                        <td>An error message ‘Required’ is displayed below the Password field.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC04 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-004</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that admin cannot log in with only password filled</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>The login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Leave the "Username" field empty.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;"></code>
+                        </td>
+                        <td>The username field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Input valid password in the "Password" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Password is entered, visible, and covered in dots.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click on the "Login" button
+                        </td>
+                        <td>An error message ‘Required’ is displayed below the Username field.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC05 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-005</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that admin cannot log in with both fields empty</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>The login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Leave the "Username" field empty.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;"></code>
+                        </td>
+                        <td>The username field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Leave the "Password" field empty.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;"></code>
+                        </td>
+                        <td>Expected result: The password field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click on the "Login" button
+                        </td>
+                        <td>An error message ‘Required’ is displayed below both Username and Password fields.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC06 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-006</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that password field hides characters (security check)</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>The login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click inside the “Password” field and type any characters.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Entered characters are replaced by dots or asterisks (hidden).</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC007 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-007</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the user stays logged in after page refresh</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>User is successfully logged in with valid credentials</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Log in using valid credentials.<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;"></code>
+                        </td>
+                        <td>Dashboard page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Refresh the browser page.<br>
+                        </td>
+                        <td>User remains logged in and stays on the Dashboard page (no redirect to login page).</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC008 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-008</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that “Forgot your password?” link redirects to the correct reset page</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>Login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on “Forgot your password?” link.<br>
+                        </td>
+                        <td>User is redirected to the password reset page (URL contains: <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">/requestPasswordResetCode</code>).
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC009 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-009</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the “Username” field is case-sensitive</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user is on the login page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 30%;">Action</th>
+                        <th style="width: 30%;">Expected Result</th>
+                        <th style="width: 30%;">Actual Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Open the login page:<br>
+                            <code
+                                style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</code>
+                        </td>
+                        <td>The login page is displayed.</td>
+                        <td>The login page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Enter the username “admin” in the Username field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin</code>
+                        </td>
+                        <td>Username is entered and visible.</td>
+                        <td>Username is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Enter the valid password “admin123” in the Password field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Password is entered and hidden.</td>
+                        <td>Password is entered and hidden.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click on the "Login" button.
+                        </td>
+                        <td>The user should not be able to log in when using a different letter case for the username
+                            (if the field is case-sensitive).</td>
+                        <td>The user is successfully logged in and redirected to the Dashboard page.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <div class="result-section">
+                <h3 style="color: #e53e3e;">Status: FAIL ❌</h3>
+                <p><strong>Bug ID:</strong> BUG-001</p>
+                <p><strong>Description: </strong>The Username field is not case-sensitive. The system allows login with
+                    both “admin” and “Admin”, which is inconsistent with the expected case-sensitive behavior.</p>
+                <p><strong>Expected behavior: </strong>Login should succeed only when the username is entered in the
+                    correct case format.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
