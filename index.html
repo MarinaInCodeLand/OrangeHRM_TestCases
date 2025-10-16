@@ -90,6 +90,10 @@
         </div>
 
         <!-- TC02 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -160,6 +164,10 @@
         </div>
 
         <!-- TC03 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -230,6 +238,10 @@
         </div>
 
         <!-- TC04 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -300,6 +312,10 @@
         </div>
 
         <!-- TC05 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -370,6 +386,10 @@
         </div>
 
         <!-- TC06 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -425,6 +445,10 @@
         </div>
 
         <!-- TC007 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -478,6 +502,10 @@
         </div>
 
         <!-- TC008 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -533,6 +561,10 @@
         </div>
 
         <!-- TC009 -->
+        <div class="header">
+            <h1>Test Scenario for Login Functionality</h1>
+            <p>OrangeHRM Demo - Admin Login Verification</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -728,6 +760,10 @@
         </div>
 
         <!-- TC011 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -821,13 +857,119 @@
             <div class="info-item">
                 <h3>Post-Conditions</h3>
                 <ul>
-                    <li>The user should be able to log in using the new password.</li>
-                    <li>The old password should no longer be valid.</li>
+                    <li>The user's password remains unchanged.</li>
+                    <li>No system errors or crashes occur due to the invalid password attempt.</li>
+                    <li>The user can still log in using the original password.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC012 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-012</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that user cannot change password when the new passwords do not match</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must be logged in (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-001
+                                </code>for valid login credentials).
+                        </li>
+                        <li>The user is on the Dashboard page:
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+                                </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on the <b>user icon </b>in the upper-right corner.<br>
+                        </td>
+                        <td>The dropdown menu is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Select the <b>“Change Password”</b> option from the dropdown.<br>
+                        </td>
+                        <td>The 'Change Password' page or modal is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Input valid current password in the <b>“Current Password”</b> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Current password is entered, visible, and covered in dots.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Enter a new password in the <b>“New Password”</b> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">newpassword123</code>
+                        </td>
+                        <td>New password is entered and masked.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Enter a different password in the <b>“Confirm Password”</b> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">password123</code>
+                        </td>
+                        <td>Confirm password is entered and masked.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Click on the <b>“Save”</b> button.
+                        </td>
+                        <td>An error message is displayed, indicating that the new passwords do not match.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The user's password remains unchanged.</li>
+                    <li>The user can still log in using the original password.</li>
+                    <li>The system correctly handles the mismatch without errors or crashes.</li>
                 </ul>
             </div>
         </div>
 
     </div>
+
 </body>
 
 </html>
