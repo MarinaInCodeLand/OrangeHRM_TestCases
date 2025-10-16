@@ -19,8 +19,6 @@ The test cases currently include steps, expected results, and layout for easy vi
 
 ![Test Case Screenshot](images/Screenshot%202025-10-16%20210926.png)  
 
-*(Replace `path-to-your-screenshot.png` with the actual path of your screenshot in the repo)*
-
 ## Status
 
 - ⚠️ Work in progress  
