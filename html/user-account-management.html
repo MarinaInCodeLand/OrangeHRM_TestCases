@@ -283,11 +283,11 @@
                     <tr>
                         <td class="step-number">Step 3</td>
                         <td class="step-description">
-                            Input valid current password in the <b>“Current Password”</b> field.<br>
+                            Enter a valid current password in the <b>“Current Password”</b> field.<br>
                             <strong>Input:</strong> <code
                                 style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
                         </td>
-                        <td>Current password is entered, visible, and covered in dots.</td>
+                        <td>Current password is entered and masked.</td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 4</td>
@@ -327,6 +327,520 @@
             </div>
         </div>
 
+        <!-- TC013 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-013</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that user cannot change password with less than 7 characters</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must be logged in (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-001
+                                </code>for valid login credentials).
+                        </li>
+                        <li>The user is on the Dashboard page:
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+                                </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on the <b>user icon </b>in the upper-right corner.<br>
+                        </td>
+                        <td>The dropdown menu is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Select the <b>“Change Password”</b> option from the dropdown.<br>
+                        </td>
+                        <td>The 'Change Password' page or modal is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Enter a valid current password in the <b>“Current Password”</b> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Current password is entered and masked.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Enter a new password that is <b>less than 7 characters</b>.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Abc12</code>
+                        </td>
+                        <td>An error message appears indicating that the password must have at least 7 characters.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The password is not changed.</li>
+                    <li>The user can still log in using the old (valid) password.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC014 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-014</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that user cannot change password without lowercase letter</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must be logged in (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-001
+                                </code>for valid login credentials).
+                        </li>
+                        <li>The user is on the Dashboard page:
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+                                </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on the <b>user icon </b>in the upper-right corner.<br>
+                        </td>
+                        <td>The dropdown menu is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Select the <b>“Change Password”</b> option from the dropdown.<br>
+                        </td>
+                        <td>The 'Change Password' page or modal is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Enter a valid current password in the <b>“Current Password”</b> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Current password is entered and masked.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Enter a new password that <b>does not contain a lowercase letter</b>.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">ADMIN123</code>
+                        </td>
+                        <td>An error message appears indicating that the password must contain at least one lowercase
+                            letter.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The password is not changed.</li>
+                    <li>The user can still log in using the old (valid) password.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC015 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-015</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that user cannot change password without a number</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must be logged in (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-001
+                                </code>for valid login credentials).
+                        </li>
+                        <li>The user is on the Dashboard page:
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+                                </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on the <b>user icon </b>in the upper-right corner.<br>
+                        </td>
+                        <td>The dropdown menu is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Select the <b>“Change Password”</b> option from the dropdown.<br>
+                        </td>
+                        <td>The 'Change Password' page or modal is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Enter a valid current password in the <b>“Current Password”</b> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">admin123</code>
+                        </td>
+                        <td>Current password is entered and masked.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Enter a new password that <b>does not contain a number</b>.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin@@</code>
+                        </td>
+                        <td>An error message appears indicating that the password must contain at least one number.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The password is not changed.</li>
+                    <li>The user can still log in using the old (valid) password.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC016 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-016</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the user cannot change the password when all fields are left empty</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must be logged in (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-001
+                                </code>for valid login credentials).
+                        </li>
+                        <li>The user is on the Dashboard page:
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+                                </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on the <b>user icon </b>in the upper-right corner.<br>
+                        </td>
+                        <td>The dropdown menu is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Select the <b>“Change Password”</b> option from the dropdown.<br>
+                        </td>
+                        <td>The 'Change Password' page or modal is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Leave the <b>“Current Password”</b> field empty.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;"></code>
+                        </td>
+                        <td>The field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Leave the <b>“New Password”</b> field empty.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;"></code>
+                        </td>
+                        <td>The field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Leave the <b>“Confirm Password”</b> field empty.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;"></code>
+                        </td>
+                        <td>The field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Click on the <b>“Save”</b> button.<br>
+                        </td>
+                        <td>Error messages are displayed for each required field.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The password is not changed.</li>
+                    <li>The user can still log in using the old (valid) password.</li>
+                    <li>The system correctly handles the empty input without errors or crashes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC017 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-017</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the user can Logout successfully</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must be logged in (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-001
+                                </code>for valid login credentials).
+                        </li>
+                        <li>The user is on the Dashboard page:
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+                                </code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on the <b>user icon </b>in the upper-right corner.<br>
+                        </td>
+                        <td>The dropdown menu is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <b>"Logout"</b> option from the dropdown.<br>
+                        </td>
+                        <td>The user is logged out and redirected to the login page.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Verify that the login page is displayed.
+                        </td>
+                        <td>The login page is displayed, confirming the user is logged out.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC018 -->
+        <div class="header">
+            <h1>Test Scenario for User Account Management</h1>
+            <p>OrangeHRM Demo - Account Settings and Profile Updates</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-018</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify session termination after logout</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The user must be logged in (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-001
+                                </code>for valid login credentials).
+                        </li>
+                        <li>The user is on the Dashboard page:
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+                                </code>
+                        </li>
+                        <li>TThe user has successfully logged out (refer to
+                            <code style="background: #f4f4f4; padding: 4px 8px; border-radius: 4px; font-size: 12px;">TC-017
+                                ).</code>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click the <b>Logout</b> option from the user menu.<br>
+                        </td>
+                        <td>The user is logged out and redirected to the login page.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            On the login page, press the browser <b>Back</b> button.<br>
+                        </td>
+                        <td>The user may see the cached Dashboard page, but any attempt to interact (e.g., click on any
+                            menu item, link, or button) redirects immediately to the Login page.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Observe whether the user can interact with the Dashboard or access any other authorized
+                            pages.
+                        </td>
+                        <td>The system correctly handles session termination and prevents unauthorized access after
+                            logout.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
