@@ -619,7 +619,9 @@
                         <td class="step-number">Step 3</td>
                         <td class="step-description">
                             Select a valid "User Role" and "Employee Name", then enter an <b>invalid username</b> in the
-                            "Username" field (e.g., anyNonExistingUsername).
+                            "Username" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admini</code>
                         </td>
                         <td>An error message is displayed next to the "Username" field indicating that the username is
                             invalid.</td>
@@ -650,6 +652,7 @@
             </div>
         </div>
 
+
         <!-- TC025 -->
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
@@ -661,6 +664,215 @@
                 <div class="info-item">
                     <h3>Test Case ID</h3>
                     <p><span class="badge">TC-025</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the system prevents adding a user with a duplicate username</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                        <li>At least one user exists</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin Management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click the "Add" button to open the "Add User" page.
+                        </td>
+                        <td>The "Add User" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select a valid "User Role" and "Employee Name", Enter an <b>existing username</b> in the
+                            "Username" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin</code>
+                        </td>
+                        <td>Error message is displayed: “Username already exists” and user is not added.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Fill in the "Password" and "Confirm Password" fields with valid and matching values.
+                        </td>
+                        <td>The password is entered correctly, and it matches the confirm password field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Click the "Save" button.
+                        </td>
+                        <td>The user cannot be added, and the page remains on the "Add User" form.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No new user is created in the system.</li>
+                    <li>The admin remains on the "Add User" page for correction.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- TC026 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-026</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the system prevents saving a user when passwords do not match</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                        <li>At least one user exists</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin Management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click the "Add" button to open the "Add User" page.
+                        </td>
+                        <td>The "Add User" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select a valid "User Role" from the dropdown.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">ESS</code>
+                        </td>
+                        <td>User role is selected and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Input an employee name in the "Employee Name" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">John Smith</code>
+                        </td>
+                        <td>Employee name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Select status from the "Status" dropdown.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Enabled</code>
+                        </td>
+                        <td>Status is selected and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Input a valid username in the "Username" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">testuser123</code>
+                        </td>
+                        <td>Username is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Input a valid password in the "Password" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin123!</code>
+                        </td>
+                        <td>Password is entered and masked with dots.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Input a <b>different password</b> in the "Confirm Password" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin456!</code>
+                        </td>
+                        <td>Password is entered and masked with dots.<br>An error message is displayed: "Passwords do
+                            not match". The user is not saved to the system.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No new user is created in the system.</li>
+                    <li>The form fields retain the previously entered values (except passwords which may be cleared).
+                    </li>
+                    <li>The admin remains on the "Add User" page for correction.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC027 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-027</span></p>
                 </div>
 
                 <div class="info-item">
@@ -730,7 +942,7 @@
             </div>
         </div>
 
-        <!-- TC026 -->
+        <!-- TC028 -->
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
             <p>OrangeHRM Demo - Admin User Management</p>
@@ -739,7 +951,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-026</span></p>
+                    <p><span class="badge">TC-028</span></p>
                 </div>
 
                 <div class="info-item">
@@ -802,7 +1014,7 @@
             </div>
         </div>
 
-        <!-- TC027 -->
+        <!-- TC029 -->
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
             <p>OrangeHRM Demo - Admin User Management</p>
@@ -812,7 +1024,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-027</span></p>
+                    <p><span class="badge">TC-029</span></p>
                 </div>
 
                 <div class="info-item">
@@ -876,7 +1088,7 @@
             </div>
         </div>
 
-        <!-- TC028 -->
+        <!-- TC030 -->
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
             <p>OrangeHRM Demo - Admin User Management</p>
@@ -885,7 +1097,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-028</span></p>
+                    <p><span class="badge">TC-030</span></p>
                 </div>
 
                 <div class="info-item">
@@ -949,7 +1161,7 @@
             </div>
         </div>
 
-        <!-- TC029 -->
+        <!-- TC031 -->
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
             <p>OrangeHRM Demo - Admin User Management</p>
@@ -958,7 +1170,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-029</span></p>
+                    <p><span class="badge">TC-031</span></p>
                 </div>
 
                 <div class="info-item">
@@ -1062,7 +1274,7 @@
             </div>
         </div>
 
-        <!-- TC030 -->
+        <!-- TC032 -->
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
             <p>OrangeHRM Demo - Admin User Management</p>
@@ -1071,7 +1283,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-021</span></p>
+                    <p><span class="badge">TC-032</span></p>
                 </div>
 
                 <div class="info-item">
@@ -1165,6 +1377,248 @@
             </div>
         </div>
 
+        <!-- TC033 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-033</span></p>
+                </div>
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the system enforces minimum length for username (5 characters)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in</li>
+                        <li>The admin is on the "Add User" page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">Fill all required fields with valid data</td>
+                        <td>All fields are filled correctly</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Input username with 4 characters.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">user</code>
+                        </td>
+                        <td>Error message displayed: "Should be at least 5 characters"</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">Click "Save"</td>
+                        <td>User is not saved, admin remains on "Add User" page</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC034 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-034</span></p>
+                </div>
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the system enforces maximum length for username (40 characters)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in</li>
+                        <li>The admin is on the "Add User" page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">Fill all required fields with valid data</td>
+                        <td>All fields are filled correctly</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Input username with 41 characters.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">thisusernameiswaytoolongandexceedsfortych</code>
+                        </td>
+                        <td>Error message displayed: "Should not exceed 40 characters"</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">Click "Save"</td>
+                        <td>User is not saved, admin remains on "Add User" page</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC035 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-035</span></p>
+                </div>
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the system enforces minimum length for password (7 characters)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in</li>
+                        <li>The admin is on the "Add User" page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">Fill all required fields with valid data</td>
+                        <td>All fields are filled correctly</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Input password with 6 characters.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Pass1!</code>
+                        </td>
+                        <td>Error message displayed: "Should have at least 7 characters"</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Confirm password.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Pass1!</code>
+                        </td>
+                        <td>Password confirmation matches the password field</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">Click "Save"</td>
+                        <td>User is not saved, admin remains on "Add User" page</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC036 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-036</span></p>
+                </div>
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the system enforces maximum length for password (64 characters)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in</li>
+                        <li>The admin is on the "Add User" page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">Fill all required fields with valid data</td>
+                        <td>All fields are filled correctly</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Input password with 65 characters.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">ThisPasswordIsWayTooLongAndExceedsSixtyFourCharactersLimitSure1!</code>
+                        </td>
+                        <td>Error message displayed: "Should not exceed 64 characters"</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Confirm password.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">ThisPasswordIsWayTooLongAndExceedsSixtyFourCharactersLimitSure1!</code>
+                        </td>
+                        <td>Password confirmation matches the password field</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">Click "Save"</td>
+                        <td>User is not saved, admin remains on "Add User" page</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 
