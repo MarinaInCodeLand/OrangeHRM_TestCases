@@ -33,7 +33,7 @@
                 <div class="info-item">
                     <h3>Pre-Conditions</h3>
                     <ul>
-                        <li>The admin must be logged in (refer to TC-019 for valid login credentials)</li>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
                         <li>The admin is on the Dashboard page</li>
                     </ul>
                 </div>
@@ -55,7 +55,7 @@
                         <td class="step-description">
                             Click on the "Admin" option from the left sidebar.
                         </td>
-                        <td>The Admin management page is displayed.</td>
+                        <td>The Admin Management page is displayed.</td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 2</td>
@@ -138,11 +138,13 @@
             </div>
         </div>
 
+
         <!-- TC020 -->
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
             <p>OrangeHRM Demo - Admin User Management</p>
         </div>
+
         <div class="content">
             <div class="info-section">
                 <div class="info-item">
@@ -152,15 +154,16 @@
 
                 <div class="info-item">
                     <h3>Test Case Name</h3>
-                    <p>Verify that the admin can delete an existing user</p>
+                    <p>Verify that a new user record is added successfully and reflected in the total user count</p>
                 </div>
 
                 <div class="info-item">
                     <h3>Pre-Conditions</h3>
                     <ul>
-                        <li>The admin must be logged in (refer to TC-019 for valid login credentials)</li>
-                        <li>The admin is on the Dashboard page</li>
-                        <li>The user to be deleted exists in the system</li>
+                        <li>The admin must be logged in (refer to <strong>TC-001</strong> for valid login
+                            credentials).
+                        </li>
+                        <li>The admin is on the <strong>Admin Management</strong> page.</li>
                     </ul>
                 </div>
             </div>
@@ -179,37 +182,96 @@
                     <tr>
                         <td class="step-number">Step 1</td>
                         <td class="step-description">
-                            Click on the "Admin" option from the left sidebar.
+                            Select the "Admin" option from the left sidebar.
                         </td>
-                        <td>The Admin management page is displayed.</td>
+                        <td>The Admin Management page is displayed.</td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 2</td>
                         <td class="step-description">
-                            Locate the user to delete from the user list.
+                            Check and note the current number of user records displayed in the table.
                         </td>
-                        <td>The user is visible in the list and selectable.</td>
+                        <td>The total number of records is visible and noted.</td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 3</td>
                         <td class="step-description">
-                            Click on the "Delete" icon/button next to the user's name.
+                            Click on the "Add User" button.
                         </td>
-                        <td>A confirmation dialog/modal is displayed, asking for deletion confirmation.</td>
+                        <td>The "Add User" form is displayed.</td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 4</td>
                         <td class="step-description">
-                            Confirm the deletion by clicking "Yes" or "Confirm" in the dialog.
+                            Select a user role from the "User Role" dropdown.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">ESS</code>
                         </td>
-                        <td>The user is deleted from the system, and a success message is displayed.</td>
+                        <td>User role is selected and visible.</td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 5</td>
                         <td class="step-description">
-                            Refresh the user list or verify the user no longer appears.
+                            Input the employee's name in the "Employee Name" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">John Smith</code>
                         </td>
-                        <td>The deleted user no longer appears in the users list.</td>
+                        <td>Employee name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Select the status from the "Status" dropdown.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Enabled</code>
+                        </td>
+                        <td>Status is selected and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Input a valid username in the "Username" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">newuser</code>
+                        </td>
+                        <td>Username is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Input a valid password in the "Password" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin123!</code>
+                        </td>
+                        <td>Password is entered, masked with dots, and accepted.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Confirm the password in the "Confirm Password" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin123!</code>
+                        </td>
+                        <td>Password confirmation matches and is accepted.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 10</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>
+                            A success message confirming the user addition is displayed, and the user is redirected to
+                            the Admin Management page.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 11</td>
+                        <td class="step-description">
+                            Check the total number of user records displayed.
+                        </td>
+                        <td>
+                            The total number of user records is increased by 1 compared to the count noted in Step 2.
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -217,8 +279,7 @@
             <div class="info-item">
                 <h3>Post-Conditions</h3>
                 <ul>
-                    <li>The deleted user cannot log in to the system.</li>
-                    <li>The admin remains logged in and can continue managing other users.</li>
+                    <li>The new user is successfully created in the system.</li>
                 </ul>
             </div>
         </div>
@@ -244,7 +305,7 @@
                 <div class="info-item">
                     <h3>Pre-Conditions</h3>
                     <ul>
-                        <li>The admin must be logged in (refer to TC-019 for valid login credentials)</li>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
                         <li>The admin is on the Dashboard page</li>
                         <li>The user to be edited exists in the system</li>
                     </ul>
@@ -267,7 +328,7 @@
                         <td class="step-description">
                             Click on the "Admin" option from the left sidebar.
                         </td>
-                        <td>The Admin management page is displayed.</td>
+                        <td>The Admin Management page is displayed.</td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 2</td>
@@ -295,14 +356,16 @@
                         <td class="step-description">
                             Click the "Save" button to apply changes.
                         </td>
-                        <td>A success message is displayed, indicating that the user's details have been updated.</td>
+                        <td>A success message is displayed, indicating that the user's details have been updated.
+                        </td>
                     </tr>
                     <tr>
                         <td class="step-number">Step 6</td>
                         <td class="step-description">
                             Verify the user list to ensure the changes are reflected.
                         </td>
-                        <td>The updated user details appear correctly in the users list.</td>
+                        <td>The updated user details are successfully reflected in the user list and persist after page
+                            refresh.</td>
                     </tr>
                 </tbody>
             </table>
@@ -316,6 +379,93 @@
                 </ul>
             </div>
         </div>
+
+        <!-- TC022 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-022</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can delete an existing user</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                        <li>The admin is on the Dashboard page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin Management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Locate the user to delete from the user list.
+                        </td>
+                        <td>The user is visible in the list and selectable.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click on the "Delete" icon/button next to the user's name.
+                        </td>
+                        <td>A confirmation dialog/modal is displayed, asking for deletion confirmation.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Confirm the deletion by clicking "Yes" or "Confirm" in the dialog.
+                        </td>
+                        <td>The user is deleted from the system, and a success message is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Refresh the user list or verify the user no longer appears.
+                        </td>
+                        <td>The deleted user no longer appears in the users list.<br>The total number of records
+                            decreases by 1.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The deleted user cannot log in to the system.</li>
+                    <li>The admin remains logged in and can continue managing other users.</li>
+                </ul>
+            </div>
+        </div>
+
+
 
 
 
