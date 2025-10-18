@@ -12,6 +12,13 @@
 <body>
     <!-- Admin Functionality -->
     <div class="container">
+
+
+
+
+
+
+
         <div class="header">
             <h1>Test Scenario for Admin Functionality</h1>
             <p>OrangeHRM Demo - Admin User Management</p>
@@ -466,8 +473,697 @@
         </div>
 
 
+        <!-- TC023 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
 
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-023</span></p>
+                </div>
 
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can delete multiple users</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                        <li>The admin is on the Dashboard page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin Management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Check the user records under "Records Found" on the Admin page.
+                        </td>
+                        <td>A list of user records is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select the checkboxes next to 2–4 users from the list.
+                        </td>
+                        <td>The selected users are checked, and the "Delete Selected" button appears above the user
+                            list.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click on the "Delete Selected" button.
+                        </td>
+                        <td>The selected users are deleted successfully. A confirmation message is displayed, and the
+                            selected user records are removed from the list.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Verify that the number of user records has decreased by the number of deleted users after
+                            the deletion.
+                        </td>
+                        <td>The selected users are no longer listed, the success message is displayed, and the total
+                            number of user records is reduced accordingly.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The deleted users cannot log in to the system.</li>
+                    <li>The admin remains logged in and can continue managing other users.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC024 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-024</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin cannot add a user with an invalid username</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                        <li>The admin is on the Dashboard page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin Management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click the "Add" button to open the "Add User" page.
+                        </td>
+                        <td>The "Add User" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select a valid "User Role" and "Employee Name", then enter an <b>invalid username</b> in the
+                            "Username" field (e.g., anyNonExistingUsername).
+                        </td>
+                        <td>An error message is displayed next to the "Username" field indicating that the username is
+                            invalid.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Fill in the "Password" and "Confirm Password" fields with valid and matching values.
+                        </td>
+                        <td>The password is entered correctly, and it matches the confirm password field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Click the "Save" button.
+                        </td>
+                        <td>The user cannot be added, and the page remains on the "Add User" form.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No new user is created in the system.</li>
+                    <li>The admin remains on the "Add User" page for correction.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC025 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-025</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin cannot add a user without providing required fields</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                        <li>The admin is on the Dashboard page</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin Management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click the "Add" button to open the "Add User" page.
+                        </td>
+                        <td>The "Add User" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Leave all required fields (<b>User Role</b>, <b>Employee Name</b>, <b>Username</b>,
+                            <b>Password</b>, <b>Confirm Password</b>) empty.
+                        </td>
+                        <td>All fields remain empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click the "Save" button.
+                        </td>
+                        <td>Error messages appear next to each required field indicating that they are required. The
+                            user cannot be added.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No new user is created in the system.</li>
+                    <li>The admin remains on the "Add User" page to fill in the missing required fields.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC026 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-026</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can search for users by their username</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one user with a known username exists in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            In the "Username" search field, input a valid username.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin</code>
+                        </td>
+                        <td>The username is entered and visible in the search field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click the "Search" button.
+                        </td>
+                        <td>The search results are displayed, showing the user with the matching username.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The admin can view the searched user's details in the results table.</li>
+                    <li>The search results can be reset using the "Reset" button.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC027 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-027</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can search for users by their User Role</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one user with the selected User Role exists in the system.</li>
+                        <li>The admin is on the Admin Management page.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            In the "User Role" dropdown, select a specific role to search for.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">ESS</code>
+                        </td>
+                        <td>The selected role is visible in the "User Role" field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click the "Search" button.
+                        </td>
+                        <td>The search results are displayed, showing only users with the selected User Role.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The admin can view users filtered by the selected User Role.</li>
+                    <li>The admin can reset the filter to view all users again.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC028 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-028</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can search for users by their Status</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one user with the selected Status exists in the system.</li>
+                        <li>The admin is on the Admin Management page.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            In the "Status" dropdown, select a specific status to search for.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Enabled</code>
+                        </td>
+                        <td>The selected status is visible in the "Status" field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click the "Search" button.
+                        </td>
+                        <td>The search results are displayed, showing only users with the selected status.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The admin can view users filtered by the selected Status.</li>
+                    <li>The admin can reset the filter to view all users again.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC029 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-029</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can reset user passwords</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one user exists in the system with a valid account.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            In the "Username" search field, input the username of the user whose password you want to
+                            reset.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin</code>
+                        </td>
+                        <td>The username is entered and visible in the search field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click the "Search" button.
+                        </td>
+                        <td>The search results are displayed, showing the user with the matching username.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click the "Edit" (pencil) icon next to the user you want to reset the password for.
+                        </td>
+                        <td>The Edit User page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Check the checkbox right below "Change Password?".
+                        </td>
+                        <td>The checkbox is selected, and the "Password" and "Confirm Password" fields become visible.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Enter a new password in the "Password" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">NewPass123!</code>
+                        </td>
+                        <td>The password is entered, visible, and meets the system's criteria.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Re-enter the new password in the "Confirm Password" field.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">NewPass123!</code>
+                        </td>
+                        <td>The password is entered and matches the first password field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Click the "Save" button.
+                        </td>
+                        <td>The user's password is successfully reset, and a confirmation message is displayed.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The user can log in using the new password.</li>
+                    <li>The admin remains logged in and can manage other users.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC030 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-021</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can enable/disable a user account</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one user exists in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Select the "Admin" option from the left sidebar.
+                        </td>
+                        <td>The Admin management page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            In the "Username" search field, input the username of the user whose account you want to
+                            enable/disable.<br>
+                            <strong>Input:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin</code>
+                        </td>
+                        <td>The username is entered and visible in the search field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click the "Search" button.
+                        </td>
+                        <td>The search results are displayed, showing the user with the matching username.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click the "Edit" (pencil) icon next to the user whose account status you want to change.
+                        </td>
+                        <td>The Edit User page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            In the "Status" dropdown, select "Enabled" to activate or "Disabled" to deactivate the user
+                            account.
+                        </td>
+                        <td>The status is updated to either "Enabled" or "Disabled" as selected.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Click the "Save" button.
+                        </td>
+                        <td>The user's account status is successfully updated, and a confirmation message is displayed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Verify the user's status by performing a search for the username again.
+                        </td>
+                        <td>The user's status appears as "Enabled" or "Disabled" based on the change.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The user's account status is updated in the system.</li>
+                    <li>The admin remains logged in and can continue managing other users.</li>
+                </ul>
+            </div>
+        </div>
 
 
     </div>
