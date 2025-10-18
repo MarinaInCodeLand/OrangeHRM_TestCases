@@ -1333,7 +1333,7 @@
                     <tr>
                         <td class="step-number">Step 2</td>
                         <td class="step-description">
-                            Click on the "Vacancy" button in the top left corner.
+                            Click on the "Vacancies" button in the top left corner.
                         </td>
                         <td>The Vacancies page is displayed with a list of existing vacancies.</td>
                     </tr>
@@ -1383,6 +1383,382 @@
                     <li>The total number of vacancies in the system is reduced by 1.</li>
                     <li>Any associated candidates remain in the system but are no longer linked to the deleted vacancy.
                     </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC049 -->
+        <div class="header">
+            <h1>Test Scenario for Recruitment Functionality</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-049</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that Admin can delete multiple vacancies at once</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                        <li>At least one vacancy must already exist in the system</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on "Recruitment" on the left side bar.
+                        </td>
+                        <td>The Candidates page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the "Vacancies" button in the top left corner.
+                        </td>
+                        <td>The Vacancies page is displayed with a list of existing vacancies.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Check and note the current total number of vacancies displayed.
+                        </td>
+                        <td>The total number of vacancies is visible and noted.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Select multiple vacancies by checking the checkboxes next to the desired vacancies.
+                        </td>
+                        <td>The checkboxes for the selected vacancies are checked.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Click on the "Delete Selected" button at the top of the vacancies list.
+                        </td>
+                        <td>A confirmation pop-up appears, asking for confirmation to delete the selected vacancies.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Confirm the deletion by clicking "Yes, Delete" in the prompt.
+                        </td>
+                        <td>The vacancies are deleted successfully, and a confirmation message is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Verify that the deleted vacancies no longer appears in the vacancies list.
+                        </td>
+                        <td>The vacancies are removed from the list.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Check the total number of vacancies displayed.
+                        </td>
+                        <td>The total number of vacancies is decreased by compared to the count noted in Step 3.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The vacancies are permanently deleted from the system.</li>
+                    <li>The deleted vacancies no longer appears in the vacancies list.</li>
+                    <li>The total number of vacancies in the system is reduced.</li>
+                    <li>Any associated candidates remain in the system but are no longer linked to the deleted vacancy.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC050 -->
+        <div class="header">
+            <h1>Test Scenario for Recruitment Functionality</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-050</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that Number of Positions field accepts valid range (1-99)</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on "Recruitment" on the left side bar.
+                        </td>
+                        <td>The Candidates page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the "Vacancies" button in the top left corner.
+                        </td>
+                        <td>The Vacancies page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click on the "+ Add" button.
+                        </td>
+                        <td>The "Add Vacancy" form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Fill in all required fields except "Number of Positions".<br>
+                            <strong>Vacancy Name:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Product Manager</code><br>
+                            <strong>Job Title:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Product Manager</code><br>
+                            <strong>Hiring Manager:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">John Smith</code>
+                        </td>
+                        <td>All required fields are filled correctly.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Input minimum valid value in "Number of Positions" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">1</code>
+                        </td>
+                        <td>The value is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>A confirmation message is displayed. The vacancy is added successfully with 1 position.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Create another vacancy and input maximum valid value in "Number of Positions" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">99</code>
+                        </td>
+                        <td>The value is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>A confirmation message is displayed. The vacancy is added successfully with 99 positions.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>Vacancies with 1 and 99 positions are successfully created.</li>
+                    <li>The system accepts values within the valid range (1-99).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC051 -->
+        <div class="header">
+            <h1>Test Scenario for Recruitment Functionality</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-051</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that Number of Positions field rejects invalid values (0, negative, > 99)</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on "Recruitment" on the left side bar.
+                        </td>
+                        <td>The Candidates page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the "Vacancies" button in the top left corner.
+                        </td>
+                        <td>The Vacancies page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click on the "+ Add" button.
+                        </td>
+                        <td>The "Add Vacancy" form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Fill in all required fields except "Number of Positions".<br>
+                            <strong>Vacancy Name:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Data Analyst</code><br>
+                            <strong>Job Title:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Data Analyst</code><br>
+                            <strong>Hiring Manager:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Jane Doe</code>
+                        </td>
+                        <td>All required fields are filled correctly.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Input 0 in "Number of Positions" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">0</code>
+                        </td>
+                        <td>The value is entered.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>An error message is displayed: "Number of Positions must be between 1 and 99".
+                            The vacancy is not saved.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Clear the field and input a negative number.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">-5</code>
+                        </td>
+                        <td>The value is entered or prevented by the system.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>An error message is displayed: "Number of Positions must be between 1 and 99".
+                            The vacancy is not saved.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Clear the field and input a number greater than 99.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">100</code>
+                        </td>
+                        <td>The value is entered.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 10</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>An error message is displayed: "Number of Positions must be between 1 and 99".
+                            The vacancy is not saved.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 11</td>
+                        <td class="step-description">
+                            Clear the field and input a valid value.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">5</code>
+                        </td>
+                        <td>The value is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 12</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>A confirmation message is displayed. The vacancy is added successfully.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No vacancy is created with invalid Number of Positions values (0, negative, >99).</li>
+                    <li>The system properly validates and rejects out-of-range values.</li>
+                    <li>The vacancy is successfully created only with a valid value (1-99).</li>
                 </ul>
             </div>
         </div>
