@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TC_style.css">
+    <title>Test Scenario for Recruitment Functionality</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+
+        <!-- TC037 -->
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-037</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that Admin can add a new candidate</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on "Recruitment" on the left side bar.
+                        </td>
+                        <td>The Candidates form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the "+ Add" button.
+                        </td>
+                        <td>The "Add Candidate" form appears.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Input valid first name in the "First Name" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">John</code>
+                        </td>
+                        <td>First name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Input valid middle name in the "Middle Name" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Michael</code>
+                        </td>
+                        <td>Middle name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Input valid last name in the "Last Name" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Smith</code>
+                        </td>
+                        <td>Last name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Select a vacancy from the "Vacancy" dropdown.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Software Engineer</code>
+                        </td>
+                        <td>The selected vacancy is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Input a valid email in the "Email" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">mail@example.com</code>
+                        </td>
+                        <td>Email is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Input a valid contact number in the "Contact Number" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">+381641234567</code>
+                        </td>
+                        <td>Contact number is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Upload a valid resume file in the "Resume" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">valid_resume.pdf</code>
+                        </td>
+                        <td>Resume file is uploaded successfully.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 10</td>
+                        <td class="step-description">
+                            Input valid keywords in the "Keywords" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Java, Selenium</code>
+                        </td>
+                        <td>Keywords are entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 11</td>
+                        <td class="step-description">
+                            Select a date in the "Date of Application" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">2024-09-30</code>
+                        </td>
+                        <td>Selected date is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 12</td>
+                        <td class="step-description">
+                            Input valid notes in the "Notes" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Experienced in automation testing</code>
+                        </td>
+                        <td>Notes are entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 13</td>
+                        <td class="step-description">
+                            Check the checkbox for "Consent to keep data".
+                        </td>
+                        <td>The checkbox is selected.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 14</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>The candidate is added successfully, and a confirmation message is displayed.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new candidate is added successfully and visible in the candidates list.</li>
+                    <li>The candidate's information is stored in the system and can be retrieved for future reference.
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+        <!-- TC038 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-038</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that Admin can add a new candidate by filling only required fields</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on "Recruitment" on the left side bar.
+                        </td>
+                        <td>The Candidates form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the "+ Add" button.
+                        </td>
+                        <td>The "Add Candidate" form appears.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Input valid first name in the "First Name" field.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">
+                            John</code>
+                        </td>
+                        <td>First name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Input valid last name in the "Last Name" field.
+                            <br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">
+                            Doe</code>
+                        </td>
+                        <td>Last name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Input a valid email in the "Email" field.
+                            <br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">
+                            john.doe@example.com</code>
+                        </td>
+                        <td>Email is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Leave the remaining fields empty (Middle Name, Vacancy, Contact Number, Resume, Keywords,
+                            Date of Application, Notes, Consent to keep data).
+                        </td>
+                        <td>All optional fields remain empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>The candidate is added successfully, and a confirmation message is displayed.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new candidate is added successfully with only required fields filled.</li>
+                    <li>The candidate's information is stored in the system and can be retrieved for future reference.
+                    </li>
+                    <li>Optional fields remain empty in the candidate's record.</li>
+                </ul>
+            </div>
+
+
+
+
+        </div>
+
+        <!-- TC039 -->
+        <div class="header">
+            <h1>Test Scenario for Admin Functionality</h1>
+            <p>OrangeHRM Demo - Admin User Management</p>
+        </div>
+
+
+</body>
+
+</html>
