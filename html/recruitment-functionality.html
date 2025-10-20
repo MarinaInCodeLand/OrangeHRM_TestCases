@@ -276,7 +276,7 @@
                         <td>All optional fields remain empty.</td>
                     </tr>
                     <tr>
-                        <td class="step-number">Step 8</td>
+                        <td class="step-number">Step 7</td>
                         <td class="step-description">
                             Click on the "Save" button.
                         </td>
@@ -982,21 +982,13 @@
                     <tr>
                         <td class="step-number">Step 7</td>
                         <td class="step-description">
-                            Input Number of Positions in the "Number of Positions" field.<br>
-                            <strong>Input:</strong> <code
-                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">2</code>
-                        </td>
-                        <td>Number of Positions is entered and visible.</td>
-                    </tr>
-                    <tr>
-                        <td class="step-number">Step 8</td>
-                        <td class="step-description">
-                            Leave the "Description" field empty and keep toggle switches in their default state.
+                            Leave the "Description" and "Number of Positions" fields empty and keep toggle switches in
+                            their default state.
                         </td>
                         <td>Optional fields remain empty or in default state.</td>
                     </tr>
                     <tr>
-                        <td class="step-number">Step 9</td>
+                        <td class="step-number">Step 8</td>
                         <td class="step-description">
                             Click on the "Save" button.
                         </td>
@@ -1031,7 +1023,7 @@
 
                 <div class="info-item">
                     <h3>Test Case Name</h3>
-                    <p>Verify that Admin cannot add a vacancy without required fields</p>
+                    <p>Verify that Admin cannot add a vacancy without Vacancy Name</p>
                 </div>
 
                 <div class="info-item">
@@ -1063,7 +1055,7 @@
                     <tr>
                         <td class="step-number">Step 2</td>
                         <td class="step-description">
-                            Click on the "Vacancy" button in the top left corner.
+                            Click on the "Vacancies" button in the top left corner.
                         </td>
                         <td>The Vacancies page is displayed.</td>
                     </tr>
@@ -1104,50 +1096,8 @@
                         <td class="step-description">
                             Click on the "Save" button.
                         </td>
-                        <td>An error message is displayed next to the "Vacancy Name" field indicating that it is
-                            required. The vacancy is not saved.</td>
-                    </tr>
-                    <tr>
-                        <td class="step-number">Step 8</td>
-                        <td class="step-description">
-                            Fill in the "Vacancy Name" field.<br>
-                            <strong>Input:</strong> <code
-                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Backend Developer</code>
-                        </td>
-                        <td>Vacancy Name is entered and visible.</td>
-                    </tr>
-                    <tr>
-                        <td class="step-number">Step 9</td>
-                        <td class="step-description">
-                            Clear the "Hiring Manager" field.
-                        </td>
-                        <td>The field is empty.</td>
-                    </tr>
-                    <tr>
-                        <td class="step-number">Step 10</td>
-                        <td class="step-description">
-                            Click on the "Save" button.
-                        </td>
-                        <td>An error message is displayed next to the "Hiring Manager" field indicating that it is
-                            required. The vacancy is not saved.</td>
-                    </tr>
-                    <tr>
-                        <td class="step-number">Step 11</td>
-                        <td class="step-description">
-                            Fill in the "Hiring Manager" field.<br>
-                            <strong>Input:</strong> <code
-                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Jane Doe</code>
-                        </td>
-                        <td>Hiring Manager is entered and visible.</td>
-                    </tr>
-
-                    <tr>
-                        <td class="step-number">Step 12</td>
-                        <td class="step-description">
-                            Click on the "Save" button.
-                        </td>
-                        <td>An error message is displayed next to the "Hiring Manager" field indicating that it is
-                            required. The vacancy is not saved.</td>
+                        <td>An error message is displayed next to the "Vacancy Name" field: "Required". The vacancy is
+                            not saved.</td>
                     </tr>
                 </tbody>
             </table>
@@ -1157,7 +1107,7 @@
                 <ul>
                     <li>No vacancy is created in the system.</li>
                     <li>The Admin remains on the "Add Vacancy" page for correction.</li>
-                    <li>Error messages are displayed for each validation failure.</li>
+                    <li>The error message is clearly visible next to the Vacancy Name field.</li>
                 </ul>
             </div>
         </div>
@@ -1177,6 +1127,214 @@
 
                 <div class="info-item">
                     <h3>Test Case Name</h3>
+                    <p>Verify that Admin cannot add a vacancy without Job Title</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on "Recruitment" on the left side bar.
+                        </td>
+                        <td>The Candidates page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the "Vacancies" button in the top left corner.
+                        </td>
+                        <td>The Vacancies page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click on the "+ Add" button.
+                        </td>
+                        <td>The "Add Vacancy" form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Input Vacancy Name.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Backend Developer</code>
+                        </td>
+                        <td>Vacancy Name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Leave the "Job Title" dropdown unselected.
+                        </td>
+                        <td>The Job Title field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Input Hiring Manager.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Jane Doe</code>
+                        </td>
+                        <td>Hiring Manager is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>An error message is displayed next to the "Job Title" field: "Required". The vacancy is not
+                            saved.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No vacancy is created in the system.</li>
+                    <li>The Admin remains on the "Add Vacancy" page for correction.</li>
+                    <li>The error message is clearly visible next to the Job Title field.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- TC048 -->
+        <div class="header">
+            <h1>Test Scenario for Recruitment Functionality</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-048</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that Admin cannot add a vacancy without Hiring Manager</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Click on "Recruitment" on the left side bar.
+                        </td>
+                        <td>The Candidates page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the "Vacancies" button in the top left corner.
+                        </td>
+                        <td>The Vacancies page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click on the "+ Add" button.
+                        </td>
+                        <td>The "Add Vacancy" form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Input Vacancy Name.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Frontend Developer</code>
+                        </td>
+                        <td>Vacancy Name is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Select Job Title from the "Job Title" dropdown.<br>
+                            <strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Software Engineer</code>
+                        </td>
+                        <td>Job Title is selected and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Leave the "Hiring Manager" field empty.
+                        </td>
+                        <td>The field remains empty.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click on the "Save" button.
+                        </td>
+                        <td>An error message is displayed next to the "Hiring Manager" field: "Required". The vacancy is
+                            not saved.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No vacancy is created in the system.</li>
+                    <li>The Admin remains on the "Add Vacancy" page for correction.</li>
+                    <li>The error message is clearly visible next to the Hiring Manager field.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC049 -->
+        <div class="header">
+            <h1>Test Scenario for Recruitment Functionality</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-049</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
                     <p>Verify that Admin can edit an existing vacancy</p>
                 </div>
 
@@ -1184,7 +1342,7 @@
                     <h3>Pre-Conditions</h3>
                     <ul>
                         <li>The Admin must be logged in (refer to TC-001 for valid login credentials)</li>
-                        <li>At least one vacancy must already exist in the system (refer to TC-026 for adding a vacancy)
+                        <li>At least one vacancy must already exist in the system (refer to TC-037 for adding a vacancy)
                         </li>
                     </ul>
                 </div>
@@ -1285,7 +1443,7 @@
             </div>
         </div>
 
-        <!-- TC048 -->
+        <!-- TC050 -->
         <div class="header">
             <h1>Test Scenario for Recruitment Functionality</h1>
             <p>OrangeHRM Demo - Recruitment</p>
@@ -1295,7 +1453,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-048</span></p>
+                    <p><span class="badge">TC-050</span></p>
                 </div>
 
                 <div class="info-item">
@@ -1387,7 +1545,7 @@
             </div>
         </div>
 
-        <!-- TC049 -->
+        <!-- TC051 -->
         <div class="header">
             <h1>Test Scenario for Recruitment Functionality</h1>
             <p>OrangeHRM Demo - Recruitment</p>
@@ -1397,7 +1555,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-049</span></p>
+                    <p><span class="badge">TC-051</span></p>
                 </div>
 
                 <div class="info-item">
@@ -1471,7 +1629,7 @@
                     <tr>
                         <td class="step-number">Step 7</td>
                         <td class="step-description">
-                            Verify that the deleted vacancies no longer appears in the vacancies list.
+                            Verify that the deleted vacancies no longer appear in the vacancies list..
                         </td>
                         <td>The vacancies are removed from the list.</td>
                     </tr>
@@ -1480,7 +1638,8 @@
                         <td class="step-description">
                             Check the total number of vacancies displayed.
                         </td>
-                        <td>The total number of vacancies is decreased by compared to the count noted in Step 3.</td>
+                        <td>The total number of vacancies is decreased by the number of deleted vacancies compared to
+                            the count noted in Step 3.</td>
                     </tr>
                 </tbody>
             </table>
@@ -1489,7 +1648,7 @@
                 <h3>Post-Conditions</h3>
                 <ul>
                     <li>The vacancies are permanently deleted from the system.</li>
-                    <li>The deleted vacancies no longer appears in the vacancies list.</li>
+                    <li>The deleted vacancies no longer appear in the vacancies list.</li>
                     <li>The total number of vacancies in the system is reduced.</li>
                     <li>Any associated candidates remain in the system but are no longer linked to the deleted vacancy.
                     </li>
@@ -1497,7 +1656,7 @@
             </div>
         </div>
 
-        <!-- TC050 -->
+        <!-- TC052 -->
         <div class="header">
             <h1>Test Scenario for Recruitment Functionality</h1>
             <p>OrangeHRM Demo - Recruitment</p>
@@ -1507,7 +1666,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-050</span></p>
+                    <p><span class="badge">TC-052</span></p>
                 </div>
 
                 <div class="info-item">
@@ -1587,14 +1746,37 @@
                     <tr>
                         <td class="step-number">Step 7</td>
                         <td class="step-description">
-                            Create another vacancy and input maximum valid value in "Number of Positions" field.<br>
+                            Click on the "+ Add" button again to create a new vacancy.
+                        </td>
+                        <td>The "Add Vacancy" form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Fill in all required fields except "Number of Positions".<br>
+                            <strong>Vacancy Name:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Senior Product Manager
+                            </code><br>
+                            <strong>Job Title:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Product Manager
+                            </code><br>
+                            <strong>Hiring Manager:</strong>
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Jane Doe
+                            </code><br>
+                        </td>
+                        <td>All required fields are filled correctly.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Input maximum valid value in "Number of Positions" field.<br>
                             <strong>Input:</strong> <code
                                 style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">99</code>
                         </td>
                         <td>The value is entered and visible.</td>
                     </tr>
                     <tr>
-                        <td class="step-number">Step 8</td>
+                        <td class="step-number">Step 10</td>
                         <td class="step-description">
                             Click on the "Save" button.
                         </td>
@@ -1613,7 +1795,7 @@
             </div>
         </div>
 
-        <!-- TC051 -->
+        <!-- TC053 -->
         <div class="header">
             <h1>Test Scenario for Recruitment Functionality</h1>
             <p>OrangeHRM Demo - Recruitment</p>
@@ -1622,7 +1804,7 @@
             <div class="info-section">
                 <div class="info-item">
                     <h3>Test Case ID</h3>
-                    <p><span class="badge">TC-051</span></p>
+                    <p><span class="badge">TC-053</span></p>
                 </div>
 
                 <div class="info-item">
