@@ -157,6 +157,31 @@
       color: white;
   }
 
+  /* Breadcrumb */
+  .breadcrumb {
+      font-size: 16px;
+      margin: 15px 0 25px 0;
+      background: #f5f7fa;
+      padding: 10px 15px;
+      border-radius: 8px;
+  }
+
+  .breadcrumb a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+  }
+
+  .breadcrumb a:hover {
+      text-decoration: underline;
+  }
+
+  .breadcrumb span {
+      color: #333;
+      font-weight: 600;
+  }
+
+
   @media (max-width: 768px) {
       .container {
           margin: 0 10px;

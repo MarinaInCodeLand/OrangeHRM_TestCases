@@ -18,6 +18,19 @@
             <p>OrangeHRM Demo - Performance</p>
         </div>
 
+                <div id="breadcrumb-container"></div>
+
+        <script>
+            fetch('breadcrumb.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('breadcrumb-container').innerHTML = data;
+
+                    // Promeni naziv trenutne stranice
+                    document.getElementById('breadcrumb-current').textContent = "Performance"; // Promeni za svaku stranicu
+                });
+        </script>
+
         <!-- TC069 -->
         <div class="content">
             <div class="info-section">

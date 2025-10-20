@@ -18,6 +18,20 @@
             <p>OrangeHRM Demo - Recruitment</p>
         </div>
 
+        
+        <div id="breadcrumb-container"></div>
+
+        <script>
+            fetch('breadcrumb.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('breadcrumb-container').innerHTML = data;
+
+                    // Promeni naziv trenutne stranice
+                    document.getElementById('breadcrumb-current').textContent = "Recruitment"; // Promeni za svaku stranicu
+                });
+        </script>
+
         <!-- TC037 -->
         <div class="content">
             <div class="info-section">

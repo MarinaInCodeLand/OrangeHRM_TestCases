@@ -18,6 +18,19 @@
             <p>OrangeHRM Demo - Time</p>
         </div>
 
+        <div id="breadcrumb-container"></div>
+
+        <script>
+            fetch('breadcrumb.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('breadcrumb-container').innerHTML = data;
+
+                    // Promeni naziv trenutne stranice
+                    document.getElementById('breadcrumb-current').textContent = "Time"; // Promeni za svaku stranicu
+                });
+        </script>
+
         <div class="content">
             <div class="info-section">
                 <div class="info-item">

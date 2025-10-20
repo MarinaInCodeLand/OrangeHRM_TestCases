@@ -1,29 +1,53 @@
 # OrangeHRM Test Cases (HTML/CSS)
 
-This repository contains **manual test cases** for the OrangeHRM demo web application, currently implemented using **HTML and CSS**.
+This repository contains **manual test cases** for the OrangeHRM demo web application, implemented using **HTML and CSS**.  
 
-## About
+The project is primarily focused on **QA manual test cases**, while also serving as practice for **frontend development**.  
 
-I personally created the **HTML structure and styling** for these test cases. The project is still **a work in progress** and the main goal is to eventually **implement it in React** with additional features such as a **breadcrumb navigation** and improved interactivity.
+The test cases include steps, expected results, and layout for easy viewing and reference. Some modules are not included, but the core functionalities are covered.  
 
-The test cases currently include steps, expected results, and layout for easy viewing and reference. This project serves as a practice for **frontend development and QA documentation**.
+## Features
 
-## Features (Planned)
+✅ HTML structure created  
+✅ CSS styling applied  
+✅ Breadcrumb navigation implemented  
 
-- Convert the current HTML/CSS structure into a React application  
-- Add breadcrumb navigation for better usability  
-- Make test cases interactive (expand/collapse, filters, etc.)  
-- Enhance styling and responsive design  
+⚠️ Interactive elements (planned):  
+- Expand/collapse sections  
+- Filters for better navigation  
+
+⚠️ Enhanced responsive design (planned):  
+- Making pages look good on mobile and smaller screens  
+
+## Test Cases Included
+
+- Login functionality  
+- User Account Management  
+- Admin Functionality  
+- Recruitment Functionality  
+- Leave Management  
+- PIM Management  
+- Time Management  
+- Performance Module  
 
 ## Screenshot
 
-![Test Case Screenshot](images/Screenshot%202025-10-16%20210926.png)  
+![Test Case Screenshot](images/Screenshot.png)  
 
-## Status
+## How to Use
 
-- ⚠️ Work in progress  
-- ✅ HTML structure created  
-- 🔄 React version planned  
+1. Clone this repository:  
+   ```bash
+   git clone https://github.com/MarinaInCodeLand/OrangeHRM-Test-Cases.git
+    ```
+
+
+2. Open `index.html` in your browser to access the main page.
+
+2. Navigate through individual test case pages to see detailed steps, expected results, and layout.
+
+3. *(Optional)* You can view it live at [GitHub Pages](https://marinaincodeland.github.io/OrangeHRM_TestCases/).
+
 
 ## Author
 
