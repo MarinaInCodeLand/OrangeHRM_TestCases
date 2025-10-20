@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TC_style.css">
+    <title>Test Scenario for Performance Management</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+
+        <!-- TC069 -->
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-069</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can add a performance review for an employee</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>The employee for whom the performance review is being added must exist in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Performance"</strong>.
+                        </td>
+                        <td>The "Manage Reviews" page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on <strong>"Configure"</strong> at the top and select <strong>"Trackers"</strong> from
+                            the dropdown.
+                        </td>
+                        <td>The Trackers configuration page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click the <strong>"+ Add"</strong> button.
+                        </td>
+                        <td>The Add Performance Tracker form is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Tracker Name"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Annual Review 2025</code>.
+                        </td>
+                        <td>The tracker name is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Type the employee name in the <strong>"Employee Name"</strong> field:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>.
+                        </td>
+                        <td>The entered employee name is visible in the field.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Reviewers"</strong> field with:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">John Smith</code>.
+                        </td>
+                        <td>The reviewer's name is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>A confirmation message appears:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Saved</code>,
+                            indicating the performance tracker has been successfully added.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The performance tracker "Annual Review 2025" is added for employee Linda Anderson.</li>
+                    <li>Reviewer John Smith is correctly assigned to the tracker.</li>
+                    <li>A success message is displayed confirming the addition.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+        <!-- TC-069a -->
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-069N-1</span></p>
+                </div>
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify error when Tracker Name is not entered</p>
+                </div>
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in.</li>
+                        <li>Employee exists in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to "Performance" → "Configure" → "Trackers" and click "+ Add".</td>
+                        <td>Add Performance Tracker form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Leave <strong>Tracker Name</strong> empty, enter <strong>Employee Name</strong>:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>
+                            and <strong>Reviewers</strong>:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">John Smith</code>.
+                        </td>
+                        <td>Tracker Name field is empty.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Click "Save".</td>
+                        <td>An error message appears: <code
+                                style="background:#f8d7da; padding:2px 6px; border-radius:3px;">Tracker Name is required</code>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+
+        <!-- TC-069b -->
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-069N-2</span></p>
+                </div>
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify error when Employee Name is not entered</p>
+                </div>
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to "Performance" → "Configure" → "Trackers" and click "+ Add".</td>
+                        <td>Add Performance Tracker form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Enter <strong>Tracker Name</strong>:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Review</code>
+                            and <strong>Reviewers</strong>:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">John Smith</code>,
+                            leave <strong>Employee Name</strong> empty.
+                        </td>
+                        <td>Employee Name field is empty.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Click "Save".</td>
+                        <td>An error message appears: <code
+                                style="background:#f8d7da; padding:2px 6px; border-radius:3px;">Employee Name is required</code>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+        <!-- TC-069c -->
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-069N-3</span></p>
+                </div>
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify error when Reviewers field is not entered</p>
+                </div>
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in.</li>
+                        <li>Employee exists in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to "Performance" → "Configure" → "Trackers" and click "+ Add".</td>
+                        <td>Add Performance Tracker form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Enter <strong>Tracker Name</strong>:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Review</code>
+                            and <strong>Employee Name</strong>:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>,
+                            leave <strong>Reviewers</strong> empty.
+                        </td>
+                        <td>Reviewers field is empty.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Click "Save".</td>
+                        <td>An error message appears: <code
+                                style="background:#f8d7da; padding:2px 6px; border-radius:3px;">Reviewers is required</code>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- TC-070 -->
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-070</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can view performance trackers</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one performance tracker exists in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to the left sidebar and click on <strong>"Performance"</strong>.</td>
+                        <td>"Manage Reviews" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Click on <strong>"My Trackers"</strong> at the top menu.</td>
+                        <td>"My Trackers" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 3</td>
+                        <td>In the "Records Found" table, locate a tracker, e.g. <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Review</code>
+                            for <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>
+                            and click <strong>"View"</strong> under the "Actions" column.</td>
+                        <td>The detailed page for the selected tracker is displayed, showing: <br>
+                            <ul>
+                                <li>Tracker Name: Quarterly Review</li>
+                                <li>Employee Name: Linda Anderson</li>
+                                <li>Reviewer: John Smith</li>
+                                <li>Status: Positive / Negative</li>
+                                <li>Comments: Optional notes or feedback visible</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The performance tracker details are correctly displayed for the admin.</li>
+                    <li>No data is modified; view-only mode is ensured.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-071 -->
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-071</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can add tracker logs</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one performance tracker exists in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to the left sidebar and click on <strong>"Performance"</strong>.</td>
+                        <td>"Manage Reviews" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Click on <strong>"My Trackers"</strong> at the top menu.</td>
+                        <td>"My Trackers" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Locate the tracker, e.g. <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Review</code>
+                            for <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>,
+                            then click <strong>"View"</strong>.</td>
+                        <td>Detailed page for the tracker is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 4</td>
+                        <td>Click the <strong>"+ Add Log"</strong> button.</td>
+                        <td>"Add Tracker Log" pop-up form is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 5</td>
+                        <td>
+                            Fill in the following fields:<br>
+                            <ul>
+                                <li><strong>Log:</strong> <code
+                                        style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Performance Improvement</code>
+                                </li>
+                                <li>Select <strong>Positive</strong> option</li>
+                                <li><strong>Comment:</strong> <code
+                                        style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Exceeded targets in Q1 and Q2</code>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>The entered log details are visible in the pop-up form.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 6</td>
+                        <td>Click the <strong>"Save"</strong> button.</td>
+                        <td>A success notification appears: <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Saved</code>,
+                            and the new log is displayed in the "Tracker Logs" section.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new tracker log is correctly displayed under the performance tracker.</li>
+                    <li>All details entered (Log, Positive/Negative, Comment) are saved and visible to the admin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-072 -->
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-072</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can edit tracker logs</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one performance tracker and its associated log must exist in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color:#667eea; margin-bottom:15px; font-size:20px;">Test Steps & Expected Results</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to the left sidebar and click on <strong>"Performance"</strong>.</td>
+                        <td>"Manage Reviews" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Click on <strong>"My Trackers"</strong> at the top menu.</td>
+                        <td>"My Trackers" page is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Locate the tracker (e.g. <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Review</code>
+                            for <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>)
+                            and click <strong>"View"</strong> under the "Actions" column.</td>
+                        <td>The detailed page for the selected tracker is displayed.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 4</td>
+                        <td>Find the desired log, click the three vertical dots on the right side, and select
+                            <strong>"Edit"</strong>.
+                        </td>
+                        <td>The "Edit Tracker Log" form appears with existing details filled in.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 5</td>
+                        <td>
+                            Edit the following fields:<br>
+                            <ul>
+                                <li><strong>Log:</strong> Change from <code
+                                        style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Performance Improvement</code>
+                                    to <code
+                                        style="background:#fff3cd; padding:2px 6px; border-radius:3px;">Q1 Performance Summary</code>
+                                </li>
+                                <li>Select <strong>Positive</strong> (if not already selected)</li>
+                                <li><strong>Comment:</strong> Update from <code
+                                        style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Exceeded Q1 target</code>
+                                    to <code
+                                        style="background:#fff3cd; padding:2px 6px; border-radius:3px;">Maintained steady progress in Q2</code>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>Updated log details are visible in the edit form.</td>
+                    </tr>
+                    <tr>
+                        <td>Step 6</td>
+                        <td>Click the <strong>"Save"</strong> button.</td>
+                        <td>A success message appears: <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Updated</code>.
+                            The log entry shows a pencil icon ✏️ and an updated modification date.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The tracker log is updated successfully.</li>
+                    <li>The modified log shows the edit icon and the latest modification date.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-073 -->
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-073</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can delete tracker logs</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one performance tracker and its associated log must exist in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color:#667eea; margin-bottom:15px; font-size:20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to the left sidebar and click on <strong>"Performance"</strong>.</td>
+                        <td>"Manage Reviews" page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Click on <strong>"My Trackers"</strong> at the top menu.</td>
+                        <td>"My Trackers" page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Locate the tracker (e.g. <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Quarterly Review</code>
+                            for <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>)
+                            and click <strong>"View"</strong> under the "Actions" column.</td>
+                        <td>The detailed page for the selected tracker is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 4</td>
+                        <td>Identify the tracker log to be deleted (e.g. <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Q1 Performance Summary</code>)
+                            and click the three vertical dots at the right end of the log.</td>
+                        <td>A dropdown menu with the option <strong>"Delete"</strong> is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 5</td>
+                        <td>Select <strong>"Delete"</strong> from the dropdown menu.</td>
+                        <td>A confirmation prompt appears asking to confirm the deletion.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 6</td>
+                        <td>Click <strong>"Yes, Delete"</strong> in the confirmation pop-up.</td>
+                        <td>
+                            The selected log is deleted successfully and no longer visible in the list.<br>
+                            A success notification appears:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Deleted</code>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The deleted tracker log is permanently removed from the tracker’s log list.</li>
+                    <li>A confirmation message confirms successful deletion.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-074 -->
+        <div class="header">
+            <h1>Test Scenario for Performance Management</h1>
+            <p>OrangeHRM Demo - Performance</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-074</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can search for employee performance trackers</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>At least one employee performance tracker must exist in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color:#667eea; margin-bottom:15px; font-size:20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:10%;">Step</th>
+                        <th style="width:45%;">Action</th>
+                        <th style="width:45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Navigate to the left sidebar and click on <strong>"Performance"</strong>.</td>
+                        <td>"Manage Reviews" page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 2</td>
+                        <td>At the top of the page, click on <strong>"Employee Trackers"</strong>.</td>
+                        <td>"Employee Performance Trackers" page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Fill in the <strong>"Employee Name"</strong> field (e.g.
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>)
+                            and select an option from the <strong>"Include"</strong> dropdown (e.g.
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Current Employees Only</code>).
+                        </td>
+                        <td>The entered employee name and selected option appear in the search fields.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 4</td>
+                        <td>Click the <strong>"Search"</strong> button.</td>
+                        <td>The "Record Found" list displays the relevant employee performance trackers.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The list of employee performance trackers matching the search criteria is displayed.</li>
+                    <li>The admin can proceed to view or edit any tracker from the list.</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

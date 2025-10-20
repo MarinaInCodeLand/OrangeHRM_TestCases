@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TC_style.css">
+    <title>Test Scenario for Time Management</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- TC-061 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-061</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can add a project</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Projects"</strong> from the dropdown.
+                        </td>
+                        <td>The Projects page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click the <strong>"+ Add"</strong> button.
+                        </td>
+                        <td>The Add Project form is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Name"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Website Redesign</code>.
+                        </td>
+                        <td>The project name is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Customer Name"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global Corp and Co</code>,
+                            then click <strong>"Add Customer"</strong> if needed.
+                        </td>
+                        <td>The customer name is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Description"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Redesigning company website with new layout and responsive UI.</code>
+                        </td>
+                        <td>The project description is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Project Admin"</strong> field with:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>
+                            and select it from the suggested list.
+                        </td>
+                        <td>The project admin is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Click <strong>"Add Another"</strong> and enter another admin name:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">John Smith</code>.
+                        </td>
+                        <td>An additional field for project admin is displayed and filled successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 10</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>A success notification appears:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Saved</code>,
+                            confirming the project has been added.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new project "Website Redesign" for "Global Corp" is successfully added and visible in the
+                        Projects list.</li>
+                    <li>Assigned admins Linda Anderson and John Smith are correctly associated with the project.</li>
+                    <li>A success message is displayed confirming the addition.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-062 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-062</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the system prevents adding duplicate project admins</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>The Add Project form is open.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option and select <strong>"Projects"</strong>
+                            from the dropdown.
+                        </td>
+                        <td>The Projects page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click the <strong>"+ Add"</strong> button.
+                        </td>
+                        <td>The Add Project form is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Name"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Mobile App Development</code>.
+                        </td>
+                        <td>The project name is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Customer Name"</strong> field with:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global Corp</code>.
+                        </td>
+                        <td>The customer name is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Project Admin"</strong> field with:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>
+                            and select it from the list.
+                        </td>
+                        <td>The project admin is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click <strong>"Add Another"</strong> and enter the same admin name again:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Linda Anderson</code>.
+                        </td>
+                        <td>The system detects a duplicate entry.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>
+                            An error message is displayed:
+                            <code style="background:#ffebee; padding:2px 6px; border-radius:3px;">Already Exists</code>.
+                            <br>The project is not saved until the duplicate admin name is removed.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No duplicate admin names are allowed for the same project.</li>
+                    <li>System displays an error message preventing project creation with duplicates.</li>
+                    <li>The admin must correct the input before saving.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-063 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-063</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can add a customer</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Customers"</strong> from the dropdown.
+                        </td>
+                        <td>The Customers page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click the <strong>"+ Add"</strong> button.
+                        </td>
+                        <td>The Add Customer form is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Name"</strong> field with:
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global Corp</code>.
+                        </td>
+                        <td>The customer name is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Description"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global technology solutions provider for international clients.</code>.
+                        </td>
+                        <td>The customer description is entered and visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>
+                            A confirmation message appears:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Saved</code>,
+                            confirming that the customer has been added.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new customer “Global Corp” is successfully added and visible in the Customers list.</li>
+                    <li>The description “Global technology solutions provider for international clients” is displayed
+                        correctly.</li>
+                    <li>A success message confirms the addition.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-064 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-064</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin cannot add a customer with an existing name</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>Customer <strong>"Global Corp"</strong> must already exist in the system.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Customers"</strong> from the dropdown.
+                        </td>
+                        <td>The Customers page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Click the <strong>"+ Add"</strong> button.
+                        </td>
+                        <td>The Add Customer form is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Name"</strong> field with an already existing name:
+                            <code style="background:#fdecea; padding:2px 6px; border-radius:3px;">Global Corp</code>.
+                        </td>
+                        <td>The system detects the duplicate name.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Description"</strong> field with:
+                            <code
+                                style="background:#fdecea; padding:2px 6px; border-radius:3px;">Duplicate entry for existing customer.</code>.
+                        </td>
+                        <td>The description is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>
+                            An error notification appears:
+                            <code style="background:#fdecea; padding:2px 6px; border-radius:3px;">Already Exists</code>,
+                            and the system prevents saving the duplicate customer.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>No new customer record is added to the Customers list.</li>
+                    <li>The system correctly displays an error message <strong>"Already Exists"</strong>.</li>
+                    <li>Admin must enter a unique customer name to successfully save.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-065 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-065</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can edit a project's info</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to <strong>TC-001</strong> for valid login credentials).
+                        </li>
+                        <li>At least one project (e.g., <strong>“Website Redesign”</strong>) must exist in the Projects
+                            list.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Projects"</strong> from the dropdown.
+                        </td>
+                        <td>The Projects page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            From the list, next to the project <strong>"Website Redesign"</strong>, click the
+                            <strong>pencil icon</strong> under the "Actions" column.
+                        </td>
+                        <td>The Edit Project page is displayed with current project details.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Edit the <strong>"Name"</strong> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background:#e9f5ff; padding:2px 6px; border-radius:3px;">Corporate Website Revamp</code>
+                        </td>
+                        <td>The project name is updated successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Edit the <strong>"Customer Name"</strong> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background:#e9f5ff; padding:2px 6px; border-radius:3px;">TechNova Ltd</code>
+                        </td>
+                        <td>The customer name is updated successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Edit the <strong>"Description"</strong> field.<br>
+                            <strong>Input:</strong> <code
+                                style="background:#e9f5ff; padding:2px 6px; border-radius:3px;">Updated design scope and added new features.</code>
+                        </td>
+                        <td>The project description is updated successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Edit the <strong>"Project Admin"</strong> field and select from the dropdown search
+                            results.<br>
+                            <strong>Input:</strong> <code
+                                style="background:#e9f5ff; padding:2px 6px; border-radius:3px;">Paul Collings</code>
+                        </td>
+                        <td>The project admin is updated successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>
+                            A confirmation message is displayed:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Updated</code>.<br>
+                            The project info is saved with new details.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The updated project <strong>"Corporate Website Revamp"</strong> is listed under the Projects
+                        table.</li>
+                    <li>All edited fields reflect the new values.</li>
+                    <li>The confirmation message <strong>"Successfully Updated"</strong> is displayed.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-065-N - 1-->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-065N-1</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin cannot save a project without entering a Name</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>The admin is on the <strong>Edit Project</strong> page for an existing project.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color:#e63946; margin-bottom:15px; font-size:20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Action</th>
+                        <th>Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Clear the <strong>"Name"</strong> field, leaving it blank.</td>
+                        <td>The field is empty.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Fill in <strong>"Customer Name"</strong> with <code>TechNova Ltd</code>.</td>
+                        <td>The customer name is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Click the <strong>"Save"</strong> button.</td>
+                        <td>
+                            A validation message appears below the field:<br>
+                            <code style="background:#fdecea; padding:2px 6px; border-radius:3px;">Required</code><br>
+                            The project cannot be saved until the Name is entered.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The project remains unchanged.</li>
+                    <li>No confirmation message (“Successfully Updated”) is displayed.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-065-N - 2-->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-065N-2</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin cannot save a project without entering a Customer Name</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>The admin is on the <strong>Edit Project</strong> page for an existing project.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color:#e63946; margin-bottom:15px; font-size:20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Step</th>
+                        <th>Action</th>
+                        <th>Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Step 1</td>
+                        <td>Enter <strong>"Name"</strong> as <code>Corporate Website Revamp</code>.</td>
+                        <td>The project name is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 2</td>
+                        <td>Clear the <strong>"Customer Name"</strong> field, leaving it blank.</td>
+                        <td>The field is empty.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Step 3</td>
+                        <td>Click the <strong>"Save"</strong> button.</td>
+                        <td>
+                            A validation message appears below the field:<br>
+                            <code style="background:#fdecea; padding:2px 6px; border-radius:3px;">Required</code><br>
+                            The project cannot be saved until the Customer Name is entered.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The project remains unchanged.</li>
+                    <li>No confirmation message (“Successfully Updated”) is displayed.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- TC-066 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-042</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can delete a project</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Projects"</strong> from the dropdown.
+                        </td>
+                        <td>The Projects page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            From the list, next to the project
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Website Redesign</code>,
+                            click the trash icon under the "Actions" column.
+                        </td>
+                        <td>A prompt appears asking to confirm the deletion.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Click <strong>"Yes, Delete"</strong> in the confirmation prompt.
+                        </td>
+                        <td>A confirmation message appears:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Deleted</code>,
+                            confirming that the project has been removed from the Projects list.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The project <strong>Website Redesign</strong> is deleted from the system.</li>
+                    <li>The Projects list is updated to reflect the removal.</li>
+                    <li>A success message is displayed to the admin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-067 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-067</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can edit a customer's info</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Customers"</strong> from the dropdown.
+                        </td>
+                        <td>The Customers page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            From the list, next to the customer
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global Corp</code>,
+                            click the pencil icon under the "Actions" column.
+                        </td>
+                        <td>The Edit Customer page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Edit the <strong>"Name"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global Corp International</code>.
+                        </td>
+                        <td>The customer name is updated successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Edit the <strong>"Description"</strong> field with:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">International branch of Global Corp with updated address and contact info.</code>
+                        </td>
+                        <td>The description is updated successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>A confirmation message appears:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Updated</code>,
+                            indicating the customer's info has been successfully updated.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The customer's name is now <strong>Global Corp International</strong>.</li>
+                    <li>The updated description is saved in the system.</li>
+                    <li>A success message is displayed confirming the update.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-067N -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-067-N</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin cannot update a customer without entering a name</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Customers"</strong> from the dropdown.
+                        </td>
+                        <td>The Customers page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            From the list, next to the customer
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global Corp</code>,
+                            click the pencil icon under the "Actions" column.
+                        </td>
+                        <td>The Edit Customer page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Clear the <strong>"Name"</strong> field so it is empty.
+                        </td>
+                        <td>The name field is empty.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>An error message appears:
+                            <code style="background:#ffebee; padding:2px 6px; border-radius:3px;">Required</code>,
+                            indicating that the customer name cannot be empty.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The customer's info is not updated.</li>
+                    <li>An error message is displayed prompting the admin to enter a valid name.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-068 -->
+        <div class="header">
+            <h1>Test Scenario for Time Management</h1>
+            <p>OrangeHRM Demo - Time</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-068</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can delete a customer</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Time"</strong>.
+                        </td>
+                        <td>The Timesheets page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Project Info"</strong> option at the top.
+                        </td>
+                        <td>The Project Info dropdown is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Select <strong>"Customers"</strong> from the dropdown.
+                        </td>
+                        <td>The Customers page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            From the list, next to the customer
+                            <code style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Global Corp</code>,
+                            click the trash icon under the "Actions" column.
+                        </td>
+                        <td>A prompt is displayed asking for confirmation to delete the customer.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Click <strong>"Yes, Delete"</strong>.
+                        </td>
+                        <td>A confirmation message appears:
+                            <code
+                                style="background:#e8f5e9; padding:2px 6px; border-radius:3px;">Successfully Deleted</code>,
+                            and the customer is removed from the list.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The customer "Global Corp" is successfully deleted from the Customers list.</li>
+                    <li>A success message is displayed confirming the deletion.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
