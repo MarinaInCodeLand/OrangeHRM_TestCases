@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TC_style.css">
+    <title>Test Scenario for PIM Management</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TC-057 -->
+        <div class="header">
+            <h1>Test Scenario for PIM Management</h1>
+            <p>OrangeHRM Demo - PIM</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-057</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can add an employee</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"PIM"</strong>.
+                        </td>
+                        <td>
+                            The <strong>"Employee List"</strong> page is displayed.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            On the top menu, click the <strong>"Add Employee"</strong> button.
+                        </td>
+                        <td>
+                            The <strong>"Add Employee"</strong> form is displayed.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Enter <strong>First Name</strong>:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Linda</code>.
+                        </td>
+                        <td>
+                            The first name is entered successfully.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Enter <strong>Middle Name</strong> (optional):
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Marie</code>.
+                        </td>
+                        <td>
+                            The middle name is entered or left blank.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Enter <strong>Last Name</strong>:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Anderson</code>.
+                        </td>
+                        <td>
+                            The last name is entered successfully.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Enter a unique <strong>Employee ID</strong>:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">EMP1234</code>.
+                        </td>
+                        <td>
+                            The employee ID is entered.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Upload an employee image by clicking <strong>"Choose File"</strong> and selecting a valid
+                            image file:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">linda_anderson.jpg</code>.
+                        </td>
+                        <td>
+                            The image is uploaded successfully.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>
+                            The employee is successfully added to the system, and the <strong>"Personal
+                                Details"</strong> page for
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Linda Anderson</code>
+                            is displayed.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new employee <strong>Linda Anderson</strong> is added to the system.</li>
+                    <li>The employee's personal details can be viewed, edited, or deleted if required.</li>
+                    <li>The uploaded image is stored and displayed in the employee's profile.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-058 -->
+        <div class="header">
+            <h1>Test Scenario for PIM Management</h1>
+            <p>OrangeHRM Demo - PIM</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-058</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can add an employee with login details</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"PIM"</strong>.
+                        </td>
+                        <td>The <strong>"Employee List"</strong> page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            On the top menu, click the <strong>"Add Employee"</strong> button.
+                        </td>
+                        <td>The <strong>"Add Employee"</strong> form is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Enter <strong>First Name</strong>:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Sophia</code>.
+                        </td>
+                        <td>The first name is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Enter <strong>Middle Name</strong> (optional):
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Rose</code>.
+                        </td>
+                        <td>The middle name is entered or left blank.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Enter <strong>Last Name</strong>:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Williams</code>.
+                        </td>
+                        <td>The last name is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Enter a unique <strong>Employee ID</strong>:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">EMP5678</code>.
+                        </td>
+                        <td>The employee ID is entered.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Upload an employee image by clicking <strong>"Choose File"</strong> and selecting a valid
+                            image:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">sophia_williams.jpg</code>.
+                        </td>
+                        <td>The image is uploaded successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Toggle the <strong>"Create Login Details"</strong> option.
+                        </td>
+                        <td>The login details fields become visible.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Enter <strong>Username</strong>:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">sophia.williams</code>.
+                        </td>
+                        <td>The username is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 10</td>
+                        <td class="step-description">
+                            Select the status checkbox to mark the account as active.
+                        </td>
+                        <td>The status is marked as active.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 11</td>
+                        <td class="step-description">
+                            Enter <strong>Password</strong>:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Password123!</code>.
+                        </td>
+                        <td>The password is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 12</td>
+                        <td class="step-description">
+                            Enter <strong>Confirm Password</strong>:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Password123!</code>.
+                        </td>
+                        <td>The confirmation password is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 13</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>
+                            The employee is successfully added with login details, and the <strong>"Personal
+                                Details"</strong> page for
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Sophia Williams</code>
+                            is displayed.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new employee <strong>Sophia Williams</strong> is added with login credentials.</li>
+                    <li>The employee's profile and login details are stored and can be managed by the admin.</li>
+                    <li>The uploaded image is stored and displayed in the employee's profile.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-059 -->
+        <div class="header">
+            <h1>Test Scenario for PIM Management</h1>
+            <p>OrangeHRM Demo - PIM</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-059</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can add a report</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"PIM"</strong>.
+                        </td>
+                        <td>The Employee List page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Click on the <strong>"Reports"</strong> option at the top.
+                        </td>
+                        <td>The Reports page is displayed.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Click on the <strong>"+ Add"</strong> button to create a new report.
+                        </td>
+                        <td>The "Add Report" form is opened.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Report Name"</strong> field with:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Monthly Attendance Report</code>.
+                        </td>
+                        <td>The report name is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Select from the <strong>"Selection Criteria"</strong> dropdown:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Employee Name</code>.
+                        </td>
+                        <td>The selection criteria is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Select from the <strong>"Include"</strong> dropdown:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Current and Past Employees</code>.
+                        </td>
+                        <td>The include option is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Select from the <strong>"Select Display Field Group"</strong> dropdown:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Personal</code>.
+                        </td>
+                        <td>The display field group is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Select from the <strong>"Select Display Field"</strong> dropdown:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Employee Id</code>.
+                        </td>
+                        <td>The display field is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Click the <strong>"+"</strong> button next to "Select Display Field" to add the field.
+                        </td>
+                        <td>The selected display field is added to the report.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 10</td>
+                        <td class="step-description">
+                            Click the <strong>"Save"</strong> button.
+                        </td>
+                        <td>A success notification appears:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Successfully Saved</code>,
+                            confirming the report is added.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The new report "Monthly Attendance Report" is added successfully and available in the Reports
+                        list.</li>
+                    <li>All selected fields are included correctly in the report.</li>
+                    <li>A success message is displayed to the admin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-060 -->
+        <div class="header">
+            <h1>Test Scenario for PIM Management</h1>
+            <p>OrangeHRM Demo - PIM</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-060</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can search for an employee</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"PIM"</strong>.
+                        </td>
+                        <td>The Employee List page is displayed with employee information.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Employee Name"</strong> field with:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Linda Anderson</code>.
+                        </td>
+                        <td>The employee name is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Employee ID"</strong> field with:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">0078</code>.
+                        </td>
+                        <td>The employee ID is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            Select from the <strong>"Employment Status"</strong> dropdown:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Full-Time Permanent</code>.
+                        </td>
+                        <td>The employment status is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            Select from the <strong>"Include"</strong> dropdown:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Current and Past Employees</code>.
+                        </td>
+                        <td>The include option is applied successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            Fill in the <strong>"Supervisor Name"</strong> field with:
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">John Smith</code>.
+                        </td>
+                        <td>The supervisor name is entered successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Select from the <strong>"Job Title"</strong> dropdown:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Project Manager</code>.
+                        </td>
+                        <td>The job title is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Select from the <strong>"Sub Unit"</strong> dropdown:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">IT Department</code>.
+                        </td>
+                        <td>The sub-unit is selected successfully.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 9</td>
+                        <td class="step-description">
+                            Click the <strong>"Search"</strong> button.
+                        </td>
+                        <td>The system displays matching employee records under "Records Found" (e.g., <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Linda Anderson</code>).
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The searched employee information is displayed correctly according to the criteria.</li>
+                    <li>The admin can view or manage the employee record from the results.</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

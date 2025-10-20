@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/TC_style.css">
+    <title>Test Scenario for Leave Management</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- TC-054 -->
+        <div class="header">
+            <h1>Test Scenario for Leave Management</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-054</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can assign leave to an employee</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>The admin must have access to the Leave Management module.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on "Leave".
+                        </td>
+                        <td>The Leave Management page is displayed, and the "Leave List" is open by default.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            On the "Leave List" page, click on the "Assign Leave" button located at the top-right corner
+                            of the page.
+                        </td>
+                        <td>The "Assign Leave" form is opened.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            In the "Employee Name" field, enter a valid employee name and select the employee from the
+                            dropdown suggestions.
+                            <br><strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Linda Anderson</code>
+                        </td>
+                        <td>The employee name is successfully entered and selected.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            In the "Leave Type" dropdown, select a valid leave type.
+                            <br><strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">CAN - Personal</code>
+                        </td>
+                        <td>The selected leave type is displayed in the field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            In the "From Date" field, select the start date for the leave using the date picker.
+                            <br><strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">21 Oct 2025</code>
+                        </td>
+                        <td>The chosen date is displayed in the "From Date" field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            In the "To Date" field, select the end date for the leave using the date picker.
+                            <br><strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">23 Oct 2025</code>
+                        </td>
+                        <td>The chosen date is displayed in the "To Date" field.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Enter a comment in the "Comments" field.
+                            <br><strong>Input:</strong> <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Annual leave for family trip</code>
+                        </td>
+                        <td>The comment is entered and visible.</td>
+                    </tr>
+                    <tr>
+                        <td class="step-number">Step 8</td>
+                        <td class="step-description">
+                            Click the "Assign" button to assign the leave.
+                        </td>
+                        <td>
+                            A warning message is displayed -
+                            <code
+                                style="background: #fff3cd; padding: 2px 6px; border-radius: 3px;">Balance not sufficient</code>
+                            -
+                            indicating that the selected employee does not have available leave days.<br>
+                            <strong>Note:</strong> This behavior is expected in the demo environment.
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The leave is assigned successfully to the selected employee (Linda Anderson).</li>
+                    <li>The assigned leave details are stored in the system and reflected in the Leave List.</li>
+                    <li>A confirmation message is displayed to confirm successful leave assignment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-055 -->
+        <div class="header">
+            <h1>Test Scenario for Leave Management</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-055</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can cancel a leave request</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>There must be an existing leave request from an employee that is in a cancellable state.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on "Leave".
+                        </td>
+                        <td>The Leave Management page is displayed, and the "Leave List" is open by default.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            Locate the leave request for the employee
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Linda Anderson</code>
+                            with leave type
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Vacation</code>
+                            and status
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Scheduled</code>.
+                        </td>
+                        <td>The specific leave request is visible in the list with its details (Employee Name, Leave
+                            Type, Status, Dates).</td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            At the end of the row, click on the three vertical dots under the "Actions" column and
+                            select
+                            <strong>"View Leave Details"</strong>.
+                        </td>
+                        <td>The "Leave Request Details" page for
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Linda Anderson</code>
+                            is displayed.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            On the "Leave Request Details" page, click on the three vertical dots again and select
+                            <strong>"Cancel Leave"</strong>.
+                        </td>
+                        <td>
+                            The leave request is canceled successfully, and a success notification appears:
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Successfully Updated</code>.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The selected leave request for <strong>Linda Anderson</strong> is marked as <em>Canceled</em> in
+                        the Leave List.</li>
+                    <li>The leave status and available balance are updated accordingly.</li>
+                    <li>A success confirmation message is displayed to the admin.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- TC-056 -->
+        <div class="header">
+            <h1>Test Scenario for Leave Management</h1>
+            <p>OrangeHRM Demo - Recruitment</p>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="info-item">
+                    <h3>Test Case ID</h3>
+                    <p><span class="badge">TC-056</span></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Test Case Name</h3>
+                    <p>Verify that the admin can search for leave requests</p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Pre-Conditions</h3>
+                    <ul>
+                        <li>The admin must be logged in (refer to TC-001 for valid login credentials).</li>
+                        <li>There must be existing leave requests available for search.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="color: #667eea; margin-bottom: 15px; font-size: 20px;">Test Steps & Expected Results</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">Step</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 45%;">Expected Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="step-number">Step 1</td>
+                        <td class="step-description">
+                            Navigate to the left sidebar and click on <strong>"Leave"</strong>.
+                        </td>
+                        <td>
+                            The Leave Management page is displayed, and the <strong>"Leave List"</strong> is open by
+                            default.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 2</td>
+                        <td class="step-description">
+                            On the top of the page, click on <strong>"My Leave"</strong>.
+                        </td>
+                        <td>
+                            The <strong>"My Leave List"</strong> page is displayed, showing leave requests specific to
+                            the logged-in admin
+                            (<code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Admin User</code>).
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 3</td>
+                        <td class="step-description">
+                            In the <strong>"From Date"</strong> field, enter
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">2024-06-01</code>.
+                        </td>
+                        <td>
+                            The selected start date is applied in the search criteria.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 4</td>
+                        <td class="step-description">
+                            In the <strong>"To Date"</strong> field, enter
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">2024-06-30</code>.
+                        </td>
+                        <td>
+                            The selected end date is applied in the search criteria.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 5</td>
+                        <td class="step-description">
+                            In the <strong>"Show Leave with Status"</strong> dropdown, select
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Taken</code>.
+                        </td>
+                        <td>
+                            The chosen status is selected and reflected in the search filter.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 6</td>
+                        <td class="step-description">
+                            In the <strong>"Leave Type"</strong> dropdown, select
+                            <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">CAN - Personal</code>.
+                        </td>
+                        <td>
+                            The selected leave type is applied to the search criteria.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="step-number">Step 7</td>
+                        <td class="step-description">
+                            Click the <strong>"Search"</strong> button.
+                        </td>
+                        <td>
+                            The system displays matching leave requests (e.g.
+                            <code style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Odis Adalwin</code>
+                            with
+                            leave type <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">CAN - Personal</code>
+                            and status <code
+                                style="background: #e8f5e9; padding: 2px 6px; border-radius: 3px;">Taken</code>).
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="info-item">
+                <h3>Post-Conditions</h3>
+                <ul>
+                    <li>The system successfully filters and displays leave records based on the specified criteria.</li>
+                    <li>The results list shows all matching leave requests for <strong>Odis Adalwin</strong> within the
+                        selected period.</li>
+                    <li>The admin can view, export, or further manage filtered records if needed.</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
